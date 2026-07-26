@@ -3,7 +3,7 @@
 const roles = [
     "Mechanical Technical Office Engineer",
     "Mechanical Design Engineer",
-    "BIM Engineer",
+    "BIM Coordinator Engineer",
     "HVAC Engineer",
     "Plumbing Engineer",
     "Fire Fighting Engineer"
