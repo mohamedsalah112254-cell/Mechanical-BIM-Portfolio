@@ -488,6 +488,44 @@ h2{
     color:var(--text-dim);
 }
 
+/* ---------- Highlight lists (used in role-detail + featured project) ---------- */
+
+.highlight-list{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin:16px 0;
+}
+
+.highlight-list li{
+    position:relative;
+    padding-left:22px;
+    color:var(--text-dim);
+    font-size:.92rem;
+    line-height:1.6;
+}
+
+.highlight-list li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:7px;
+    width:8px;
+    height:8px;
+    border-radius:2px;
+    background:var(--cyan);
+    transform:rotate(45deg);
+}
+
+.sub-project .highlight-list{
+    margin:10px 0 0;
+}
+
+.sub-project .highlight-list li{
+    font-size:.9rem;
+}
+
 /* ---------- Projects ---------- */
 
 .project-card{
@@ -569,41 +607,26 @@ h2{
     font-size:1.6rem;
 }
 
-/* ---------- Gallery empty state ---------- */
+/* ---------- Videos (embedded within a project's role-detail) ---------- */
 
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:15px;
+.project-videos{
+    margin-top:22px;
 }
 
-.gallery img{
-    width:100%;
-    border-radius:15px;
-    transition:.4s;
-}
-
-.gallery img:hover{
-    transform:scale(1.05);
-}
-
-.gallery-empty{
-    grid-column:1 / -1;
-    border:1px dashed var(--border);
-    border-radius:16px;
-    padding:60px 20px;
-    text-align:center;
-    color:var(--text-dim);
-}
-
-.gallery-empty i{
-    font-size:1.8rem;
+.project-videos h4{
+    font-family:"JetBrains Mono",monospace;
+    font-size:.72rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
     color:var(--cyan);
     margin-bottom:14px;
-    display:block;
 }
 
-/* ---------- Videos ---------- */
+.video-caption{
+    font-size:.85rem;
+    color:var(--text-dim);
+    margin-bottom:8px;
+}
 
 .video-grid{
     display:grid;
